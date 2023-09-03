@@ -18,4 +18,16 @@ describe("Newsletter Subscribe Form", () => {
     cy.getByData("submit-button").click() // click on submit button
     cy.getByData("success-message").should("not.exist") // check if success message is not shown for the provided email
   })
+
+  it("does NOT allow already subscribed email addresses", () => {
+    const email = "john@example.com" // already subscribed email
+
+    cy.getByData("email-input").type(email)
+    cy.getByData("submit-button").click()
+    cy.getByData("server-error-message")
+      .should("exist")
+      .contains(
+        `${email} already exists. Please use a different email address.`
+      )
+  })
 })
