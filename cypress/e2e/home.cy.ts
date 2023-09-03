@@ -5,7 +5,7 @@ describe("home page", () => {
       "Testing Next.js Applications with Cypress"
     )
   })
-  it("the features on the homepage are correct", () => {
+  it.only("the features on the homepage are correct", () => {
     cy.visit("http://localhost:3000")
   })
 })
