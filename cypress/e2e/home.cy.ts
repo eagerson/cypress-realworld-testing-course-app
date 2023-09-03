@@ -30,5 +30,10 @@ describe("home page", () => {
       cy.getByData("course-1").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
       cy.location("pathname").should("equal", "/testing-foundations") // checking if the new opened url matches the option we have selected
     })
+
+    it("Course: Cypress Fundamentals", () => {
+      cy.getByData("course-2").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
+      cy.location("pathname").should("equal", "/cypress-fundamentals") // checking if the new opened url matches the option we have selected
+    })
   })
 })
