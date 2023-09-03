@@ -25,5 +25,10 @@ describe("home page", () => {
       cy.getByData("course-0").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
       cy.location("pathname").should("equal", "/testing-your-first-application") // checking if the new opened url matches the option we have selected
     })
+
+    it("Course: Testing Foundations", () => {
+      cy.getByData("course-1").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
+      cy.location("pathname").should("equal", "/testing-foundations") // checking if the new opened url matches the option we have selected
+    })
   })
 })
