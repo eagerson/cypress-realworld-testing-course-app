@@ -1,3 +1,4 @@
+//TUTORIAL-SECTION: this test suite deals with testing with forms
 describe("Newsletter Subscribe Form", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000")

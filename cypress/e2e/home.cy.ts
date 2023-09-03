@@ -3,6 +3,7 @@ describe("home page", () => {
     cy.visit("http://localhost:3000")
   })
 
+  //TUTORIAL-SECTION: this context deals to demonstrate basics
   context("Hero section", () => {
     it("the h1 contains the correct text", () => {
       cy.getByData("hero-heading").contains(
@@ -18,6 +19,7 @@ describe("home page", () => {
     })
   })
 
+  //TUTORIAL-SECTION: this context deals with testing with multiple pages
   context("Courses section", () => {
     it("Course: Testing Your First Next.js Application", () => {
       cy.getByData("course-0").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
