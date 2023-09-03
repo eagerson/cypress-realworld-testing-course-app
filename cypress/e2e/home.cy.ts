@@ -22,17 +22,17 @@ describe("home page", () => {
   //TUTORIAL-SECTION: this context deals with testing with multiple pages
   context("Courses section", () => {
     it("Course: Testing Your First Next.js Application", () => {
-      cy.getByData("course-0").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
+      cy.getByData("course-0").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing context "Get started"
       cy.location("pathname").should("equal", "/testing-your-first-application") // checking if the new opened url matches the option we have selected
     })
 
     it("Course: Testing Foundations", () => {
-      cy.getByData("course-1").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
+      cy.getByData("course-1").find("a").contains("Get started").click() // gets "course-1" then its children "a" containing context "Get started"
       cy.location("pathname").should("equal", "/testing-foundations") // checking if the new opened url matches the option we have selected
     })
 
     it("Course: Cypress Fundamentals", () => {
-      cy.getByData("course-2").find("a").contains("Get started").click() // gets "course-0" then its children "a" containing contenxt "Get started"
+      cy.getByData("course-2").find("a").contains("Get started").click() // gets "course-2" then its children "a" containing context "Get started"
       cy.location("pathname").should("equal", "/cypress-fundamentals") // checking if the new opened url matches the option we have selected
     })
   })
